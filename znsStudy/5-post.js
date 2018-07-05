@@ -7,7 +7,7 @@ http.createServer((req,res)=>{
     // data-有一段数据到达（很多次）
     //req.on添加事假，每来一次添加一次（不好的方案），req.on('end',function(){})只会有一次，最终的结果
     // console.log(req)
-    let str=''
+    let str=''//如果有上传字符串，字符串的形式就不能满足
     let i=0
     req.on("data",function(data){
         //如果testarea里面文字足够多，可以看到多次接收
